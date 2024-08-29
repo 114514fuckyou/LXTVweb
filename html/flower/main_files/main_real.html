@@ -1,0 +1,662 @@
+<html>
+<head>
+<title>main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Hide
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+//容错
+// -->
+</SCRIPT>
+<SCRIPT language=JavaScript>
+<!--
+var srcc = window.location;
+srcc = srcc.toString()
+start = srcc.indexOf("?");
+end = srcc.length;
+if (start==-1){
+srcc="rtsp://real.cctv.com.cn/encoder/live.rm"
+}
+if (start>-1){
+srcc = srcc.substring(start+1,end);
+}
+/*
+function de(){
+var urll = "main_media.html" + "?" + srcc
+window.location = urll
+}
+*/
+var RealMode=0;
+var RealPlayer5=0;
+var RealPlayer4=0;
+var RealPlayerG2=0;
+if (navigator.userAgent.indexOf("MSIE")< 0 ){
+numPlugins = navigator.plugins.length;
+for (i = 0; i < numPlugins; i++){
+plugin = navigator.plugins[i];
+if (plugin.name.substring(0,10)=="RealPlayer"){
+RealMode=1;
+}
+}
+}
+document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+document.write('on error resume next \n');
+document.write('RealPlayerG2 = (NOT IsNull(CreateObject("rmocx.RealPlayer G2 Control")))\n');
+document.write('RealPlayer5 = (NOT IsNull(CreateObject("RealPlayer.RealPlayer(tm) ActiveX Control (32-bit)")))\n');
+document.write('RealPlayer4 = (NOT IsNull(CreateObject("RealVideo.RealVideo(tm) ActiveX Control (32-bit)")))\n');
+document.write('</SCRIPT\> \n');
+if ( RealPlayerG2 || RealPlayer5 || RealPlayer4 ){
+}else if ( RealMode ){
+}else{
+alert("请先下载并安装RealPlayer");
+window.location.replace("http://web.archive.org/web/20030201084002/http://www.micromadie.com"); // 转入install.htm页面指导用户进行安装
+window.resizeTo(700,500);
+}
+
+-->
+
+</SCRIPT>
+<SCRIPT language=JavaScript fptype="dynamicanimation">
+<!--
+function dynAnimation() {}
+function clickSwapImg() {}
+//-->
+</SCRIPT>
+<SCRIPT language=JavaScript1.2 src="" fptype="dynamicanimation">
+</SCRIPT>
+<SCRIPT language=javascript>
+	function preload(imgname,imgsrc)
+	{
+		eval(imgname+'=new Image()')
+		eval(imgname+'.src="'+imgsrc+'"')
+	}
+	for(i=1;i<=3;i++)
+	{
+		preload('st_search0'+i,'images/st_search0'+i+'.gif')
+		preload('st_play0'+i,'images/play_b.gif')
+		preload('st_stop0'+i,'images/stop_b.gif')
+		preload('st_pause0'+i,'images/pause_b.gif')
+		preload('st_sound0'+i,'images/st_sound0'+i+'.gif')
+	}
+	strs="<table width=408 height=112 border=0 cellpadding=0 cellspacing=0><tr><td background=images/st_up.jpg align=center><table width=370 height=112 border=0 cellpadding=0 cellspacing=0 background=''><tr><td width=24 height=1></td><td></td><td width=12></td><td></td><td width=12></td><td></td><td width=12></td><td width=100></td><td></td></tr>"
+	str1="<tr><td height=25 valign=bottom colspan=9>"
+	str2="<tr valign=bottom><td height=29></td>"
+	str3="<tr valign=bottom><td height=30></td>"
+	str4="</td></tr>"
+	stre1="<tr><td height=27 colspan=9><img src=images/st_aup.gif width=15 height=15 border=0 style='cursor:hand' onclick=menutopdown("
+	stre2=")></td></tr></table></td></tr></table>"
+	strright2="</td></tr></table>"
+	m=4;
+	movestep=10;movetime=5;movestop=true;movestart=false;curmenu=-1;leftshow=false;rightshow=false;bothstar=false;var moveobj;var nnnn;
+	moveon=false;movelen=80;timesnum=100;rmstart=false;rm_tollen=0;timelen=1000;volumlen=44;volon=false;
+	document.onmouseup=Total_Up
+	document.ondragstart=doDragStart
+	function doDragStart() {event.returnValue=false}
+	
+	
+	var Living=true
+	var AutoPlay=true
+	var IsVidio
+	var Button_Num=0;
+	var Real 
+	Real='document.RPOCX.'
+	var CanPlay=true;
+	var CanStop=false;
+	var CanPause=false;
+	var fullscreen=false;
+	var Mute=false;
+	var CanSetPos=false;
+	var SetPosStart=false;
+	var GetLenStart=false
+	var CanSetVol=true;
+	var SetVolStart=false
+	var bigwin=false;
+	var PlayState=0;
+	var SVolume = 50;	
+
+var abc
+function playy(src){
+abc=src
+ClickStop()
+ClickPlay()
+}
+	function init()
+	{
+			MM_Down(1,1,playimg,st_play02);
+			ClickPlay();
+			MM_Up(1,1,playimg,st_play01,st_play03);	}
+	
+	function DoPlay()
+	{eval(Real+'DoPlay()');}
+	function DoStop()
+	{eval(Real+'DoStop()');}
+	function DoPlayPause()
+	{eval(Real+'DoPlayPause()');}
+	
+	function SetPosition(Pos)
+	{eval(Real+'SetPosition(Pos)');}
+	function SetVolume(Pos)
+	{eval(Real+'SetVolume(Pos)');}
+	
+	function SetMute(Status)
+	{if (Status)
+			eval(Real+'SetMute(true)')
+		else
+			eval(Real+'SetMute(false)');}
+	
+	function GetLength()
+	{return eval(Real+'GetLength()');}
+	function GetPosition()
+	{return eval(Real+'GetPosition()');}
+	function GetPState()		//**
+	{return eval(Real+'GetPlayState()');}
+	
+	function SetSource(srcname)
+	{eval(Real+'SetSource(srcname)')}
+	
+	function SetWH(widthpx,heightpx)
+	{eval(Real+'width=widthpx');eval(Real+'height=heightpx')}
+	
+	function SetFullScreen()
+	{
+		if(!CanPlay)
+		{
+			
+			eval(Real+'SetFullScreen()');
+			fullscreen=true;
+			DoPlayPause();
+			DoPlay();
+			
+		}
+	}
+	
+	function M_Down(Num,Status,D_Img,S_Img)
+	{
+		if (Status&&event.button!=2)
+		{
+			Button_Num=Num;
+			D_Img.src=S_Img.src;
+		}
+	}
+	function MM_Down(Num,Status,D_Img,S_Img)
+	{
+		if (Status)
+		{
+			Button_Num=Num;
+			D_Img.src=S_Img.src;
+		}
+	}
+	function M_Up(Num,Status,D_Img,S1_Img,S2_Img)
+	{
+		if(event.button!=2)
+		{
+			if (Num==Button_Num)
+			{
+				if (Status)
+					D_Img.src=S2_Img.src
+			}
+			else
+				Total_Up();
+			Button_Num=0;
+		}
+	}
+	function MM_Up(Num,Status,D_Img,S1_Img,S2_Img)
+	{
+			if (Num==Button_Num)
+			{
+				if (Status)
+					D_Img.src=S2_Img.src
+			}
+			else
+				Total_Up();
+			Button_Num=0;
+	}
+	
+	function ClickPlay()
+	{
+		if (CanPlay)
+		{
+	document.RPOCX.setSource(abc);
+			CanPlay=false;
+			CanPause=true;
+			pauseimg.src="images/pause.gif"
+			PlayState=1;
+			CanSetPos=true;
+			getlen();
+			if (!CanStop)
+			{
+				CanStop=true;
+				stopimg.src="images/stop.gif";
+			}
+			if(!Mute) SetMute(false)
+			setvol()
+			DoPlay();
+			if(!Living) 
+				setTimeout('getlen()',100)
+		}
+	}
+	function ClickPause()
+	{
+		if (CanPause)
+		{
+			CanPause=false;
+			CanPlay=true;
+			playimg.src="images/play.gif";
+			PlayState=4
+			CanSetPos=false;
+			if(moveon) clearTimeout(mfollow)
+			DoPlayPause();
+		}
+	}
+	function ClickStop()
+	{
+		if (CanStop)
+		{
+			CanStop=false;
+			CanPlay=true;
+			playimg.src="images/play.gif";
+			PlayState=0
+			if (CanPause)
+			{
+				CanPause=false;
+			}
+			pauseimg.src="images/pause.gif";
+			if(CanSetPos) {CanSetPos=false;stopimg.src=st_stop03.src}
+			if(moveon) clearTimeout(mfollow)
+			mblock.style.left=0
+			DoStop();
+		}
+	}
+	
+	function ClickSound()
+	{
+		if (Mute)
+		{
+			M_Down(5,true,soundimg,"images/sound_b.gif")
+			Mute=false;
+			document.soundimg.src="images/sound.gif"
+			SetMute(Mute);
+		}
+		else
+		{
+			M_Down(5,true,soundimg,"images/sound.gif")
+			Mute=true;
+			document.soundimg.src="images/sound_b.gif"
+			SetMute(Mute);
+		}		
+		
+if (!CanPlay) return
+	
+	if (soundimg.src=="images/sound.gif"){
+	document.soundimg.src="images/sound.gif";
+	}	
+	else{
+	  document.soundimg.src="images/sound_b.gif";
+	}  
+	}
+	
+	function Total_Up()
+	{
+			switch (Button_Num)
+			{
+				case 1: playimg.src="images/play.gif";break;
+				case 2: pauseimg.src="images/pause.gif";break;
+				case 3: stopimg.src="images/stop.gif";break;
+			}
+			if(SetPosStart)	setpos();
+			if(SetVolStart) setvol();
+	}
+	
+	function moves()
+	{
+		if(CanSetPos&&event.button!=2)
+		{
+			DoPlayPause()
+			orix=event.x
+			orileft=mblock.style.pixelLeft
+			if(moveon) clearTimeout(mfollow)
+			SetPosStart=true
+		}
+		else
+		return false
+	}
+	
+	function movego()
+	{
+		if(SetPosStart)
+		{
+			newx=event.x
+			disx=newx-orix
+			newleft=orileft+disx
+			if(newleft>-1&&newleft<movelen) mblock.style.left=newleft
+		}
+	}
+	
+	function setpos()
+	{
+		SetPosStart=false
+		newleft=mblock.style.pixelLeft
+		rcp=Math.floor((newleft/movelen)*rm_tollen)
+		SetPosition(rcp)
+		setTimeout('moveshow()',timelen)
+		DoPlay()
+	}
+	function getlen()
+	{
+		PlayState=GetPState();
+		if(PlayState==2||PlayState==1||PlayState==0||PlayState==-1) {reget=setTimeout('getlen()',1000);GetLenStart=true}
+		else 
+		{
+			CanSetPos=true;
+			rm_tollen=GetLength()
+			if(GetLenStart) clearTimeout(reget)
+			//timelen=Math.floor(rm_tollen/timesnum)
+	//		alert("totaltime:"+rm_tollen+"   timelen:" + timelen);
+			
+			moveshow()
+		}
+	}
+
+	function GetFullScreen()
+	{
+		if(eval(Real+'GetFullScreen()'))
+			return true;
+		else
+			return false;
+	}
+	
+function moveshow()
+{
+	rm_curpos=GetPosition()
+	rm_tollen=GetLength()
+	if(!GetFullScreen()&&!fullscreen)
+	{
+		resttime=rm_tollen-rm_curpos
+		if(resttime<timelen) 
+		{
+			mblock.style.left=movelen;
+			setTimeout('MM_Down(3, CanStop, stopimg, st_stop02); ClickStop(); MM_Up(3, CanStop, stopimg, st_stop01, st_stop03)', resttime);
+			moveon=false;
+			ClickStop();
+		}
+		else if(rm_curpos<rm_tollen)
+		{
+			blockpos=Math.floor((movelen/rm_tollen)*rm_curpos)
+			mblock.style.left=blockpos
+			moveon=true
+			mfollow=setTimeout('moveshow()',timelen)
+			
+		}
+
+		fullscreen=false;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+function vols()
+	{
+		if(event.button!=2)
+		{
+		orix=event.x
+		orileft=vblock.style.pixelLeft
+		SetVolStart=true
+		}
+	}
+	function volgo()
+	{
+		if(SetVolStart)
+		{
+			newx=event.x
+			disx=newx-orix
+			newleft=orileft+disx
+			if(newleft>-1&&newleft<volumlen) vblock.style.left=newleft
+		}
+	}
+
+	
+	
+	function setvol(plusnum)
+	{
+		if(plusnum == 10)
+		{
+			if(SVolume != 100)
+			{
+				SVolume += plusnum;
+				SetVolume(SVolume);
+				
+			}
+		}
+		if(plusnum == -10)
+		{
+			if(SVolume != 0)
+			{
+				SVolume += plusnum;
+				SetVolume(SVolume);
+				
+			}
+		}
+	}
+	
+	function SetBigWin(srcfile)
+	{
+		divtvsmall.style.visibility='hidden';
+		divtvbig.style.visibility='visible';
+		SetWH(240,180);
+		divreal.style.top=23;
+		bigwin=true;
+		if (CanStop)	{M_Down(3,CanStop,stopimg,st_stop02);ClickStop();M_Up(3,CanStop,stopimg,st_stop01,st_stop03) }
+		SetSource(srcfile);
+		if (AutoPlay)	
+		setTimeout('MM_Down(1,1,playimg,st_play02);ClickPlay();MM_Up(1,1,playimg,st_play01,st_play03)',100);
+	}
+	function SetSmallWin(srcfile)
+	{
+		divtvbig.style.visibility='hidden';
+		divtvsmall.style.visibility='visible';
+		SetWH(250,222);
+		divreal.style.top=61;
+		bigwin=false;
+		if (CanStop)	{M_Down(3,CanStop,stopimg,st_stop02);ClickStop();M_Up(3,CanStop,stopimg,st_stop01,st_stop03) }
+		SetSource(srcfile);
+		if (AutoPlay)	setTimeout('MM_Down(1,1,playimg,st_play02);ClickPlay();MM_Up(1,1,playimg,st_play01,st_play03)',100);
+	}
+	
+	function ChangeSize()
+	{
+	if(!CanPlay)
+		{
+		if(bigwin)
+			{
+				divtvsmall.style.visibility='visible';
+				divtvbig.style.visibility='hidden';
+				divreal.style.top=40;
+				divreal.style.left=13;
+				SetWH(232,186);
+				bigwin=false;
+			}
+		else
+			{
+				divtvsmall.style.visibility='hidden';
+				divtvbig.style.visibility='visible';
+				divreal.style.top=21;
+				divreal.style.left=13;
+				SetWH(340,250);
+				bigwin=true;
+			}
+		}
+	}
+	
+	function WinOpen(fileurl)
+	{
+		var popup = null;
+		popup = window.open('', 'popupnav', 'width=320,height=390,left=0,top=0,alwaysraised=1,dependent=1,resizable=0,scrollbars=1');
+		if (popup != null) popup.location.href = fileurl;
+		popup.focus();
+	}
+	
+</SCRIPT>
+<style type="text/css">
+<!--
+td {  font-size: 12px; color: #FFFFFF}
+a {  color: #CCCCCC; text-decoration: none}
+-->
+</style>
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" onload=playy(srcc)>
+<table width="335" border="0" height="255" cellpadding="0" cellspacing="0" bgcolor="4E565C">
+  <tr>
+    <td align="center"><object classid=clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA height=180 
+      id=RPOCX width=240 bgcolor="#000000">
+        <param name="CONTROLS" value="Imagewindow">
+        <param name="AUTOSTART" value="1">
+        <param name="NOLABELS" value="0">
+        <param name="CONSOLE" value="clip1">
+        <param name="_ExtentX" value="9525">
+        <param name="_ExtentY" value="6350">
+        <param name="SHUFFLE" value="0">
+        <param name="PREFETCH" value="0">
+        <param name="LOOP" value="1">
+        <param name="NUMLOOP" value="0">
+        <param name="CENTER" value="0">
+        <param name="MAINTAINASPECT" value="0">
+        <param name="BACKGROUNDCOLOR" value="#000000">
+      </object></td>
+  </tr>
+</table>
+<table width="335" border="0" cellpadding="0" cellspacing="0" height="1" bgcolor="142E44">
+  <tr>
+    <td></td>
+  </tr>
+</table>
+<table width="335" border="0" height="27" cellpadding="0" cellspacing="0" bgcolor="3A3A3A">
+  <tr> 
+    <td>
+      <table width="335" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="7">&nbsp;</td>
+          <td width="37"><img src="images/play_b.gif" width="37" height="11" name=playimg onclick=ClickPlay() 
+      onmousedown=M_Down(1,CanPlay,playimg,st_play03) 
+      onmouseup=M_Up(1,CanPlay,playimg,st_play01,st_play03) 
+      style="CURSOR: hand" ></td>
+          <td width="6">&nbsp;</td>
+          <td width="37"><img src="images/stop.gif" width="37" height="11" name=stopimg onclick=ClickStop() 
+      onmousedown=M_Down(3,CanStop,stopimg,st_stop03) 
+      onmouseup=M_Up(3,CanStop,stopimg,st_stop01,st_stop03) 
+      style="CURSOR: hand"></td>
+          <td width="6">&nbsp;</td>
+          <td width="37"><img src="images/pause.gif" width="37" height="11" name=pauseimg onclick=ClickPause() 
+      onmousedown=M_Down(2,CanPause,pauseimg,st_pause03) 
+      onmouseup=M_Up(2,CanPause,pauseimg,st_pause01,st_pause03) 
+      style="CURSOR: hand"></td>
+          <td width="6">&nbsp;</td>
+          <td width="93"><img src="images/course.gif" width="93" height="11"></td>
+          <td width="6">&nbsp;</td>
+          <td width="11"><a onClick=ClickSound()><img src="images/sound.gif" width="11" height="11" name=soundimg border="0"></a></td>
+          <td width="6">&nbsp;</td>
+          <td width="52"><img src="images/volume2.gif" width="37" height="11" border="0" usemap="#Map" align="bottom"></td>
+          <td width="6">&nbsp;</td>
+          <td><img src="images/full.gif" width="11" height="11" style="cursor:hand" onclick=SetFullScreen()></td>
+          <td width="7">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="335" border="0" cellpadding="0" cellspacing="0" height="1" bgcolor="#666666">
+  <tr> 
+    <td></td>
+  </tr>
+</table>
+<table width="335" border="0" height="48" cellpadding="0" cellspacing="0" bgcolor="3A3A3A">
+  <tr> 
+    <td>
+      <table width="335" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="7">&nbsp;</td>
+          <td width="75"> 
+            <table width="75" border="0" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td bgcolor="5E686F"><img src="images/realplayer.gif" width="73" height="18"></td>
+              </tr>
+              <tr> 
+                <td height="2"></td>
+              </tr>
+              <tr> 
+                <td><a href="main_media.html"><img src="images/mediaplayer_b.gif" width="73" height="18" border="0"></a></td>
+              </tr>
+            </table>
+          </td>
+          <td bgcolor="5E686F">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td width="50" align="center"><img src="images/reallogo.gif" width="33" height="28"></td>
+                <td><a href="http://web.archive.org/web/20030201084002/http://www.real.com/" target=_blank>real player 插件下载</a></td>
+              </tr>
+            </table>
+          </td>
+          <td width="7">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<div id="Layer1" style="position:absolute; width:200px; height:115px; z-index:1">
+  <DIV id=buttons 
+style="HEIGHT: 17px; LEFT: 44px; POSITION: absolute; TEXT-ALIGN: left; TOP: 4px; WIDTH: 20px; Z-INDEX: 10"> 
+    <DIV id=movie onmousemove=movego() onmouseup=Total_Up() 
+style="HEIGHT: 25px; LEFT: 91px; POSITION: relative; TOP: -85px; WIDTH: 15px"> 
+    <DIV id=mblock 
+style="HEIGHT: 12px; LEFT: 0px; POSITION: absolute; TOP: 12px; width: 15px" style="font:12px"> <IMG alt=position border=0 height=11 onclick=moves() onmousedown=moves() 
+src="images/course_button.gif" style="CURSOR: hand" width=15> </DIV>
+  </DIV>
+</DIV>
+</div>
+<map name="Map"> 
+  <area shape="rect" coords="20,0,37,13" href="javascript:setvol(10)">
+  <area shape="rect" coords="0,0,16,13" href="javascript:setvol(-10)">
+</map>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 08:40:02 Feb 01, 2003 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:16:55 Nov 07, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 910.165
+  exclusion.robots: 0.081
+  exclusion.robots.policy: 0.072
+  cdx.remote: 0.056
+  esindex: 0.01
+  LoadShardBlock: 886.535 (3)
+  PetaboxLoader3.datanode: 69.263 (4)
+  load_resource: 128.916
+  PetaboxLoader3.resolve: 112.236
+-->

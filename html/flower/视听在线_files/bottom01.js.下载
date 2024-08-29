@@ -1,0 +1,75 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+document.write("<table bgcolor=#AFAEAF border=0 cellpadding=0 cellspacing=0 width=778 align='center'>");
+document.write("  <tbody> ");
+document.write("  <tr>");
+document.write("    <td align=right height=5></td>");
+document.write("  </tr>");
+document.write("  </tbody> ");
+document.write("</table>");
+document.write("<table bgcolor=#DDDEDE border=0 cellpadding=0 cellspacing=0 width=778> ");
+document.write("  <tbody> ");
+document.write("  <tr> ");
+document.write("    <td align='center' colspan=3> ");
+document.write("    </td>");
+document.write("  </tr>");
+document.write("  <tr align='center'> ");
+document.write("    <td colspan=3 height=28><a href='/profile/index.html' target=_blank><font color='#000000'>CCTV介绍</font></a> | <a href='/service/about/about.html' target=_blank><font color='#000000'>关于我们</font></a> | <a href='/temp/cctvmap/channel.html' target=_blank><font color='#000000'>网站地图</font></a> | <a href='/service/zhaopin/recruit/index.html' target=_blank><font color='#000000'>网站招聘</font></a> | <a href=javascript:void() onClick='javascript:window.open(\"/advertisement/guanggao/index0.html\",\"new\",\"height=400,width=550\");return false;'><font color='#000000'>广告服务</font></a> | <a href='/temp/new_banquan/index.html' target=_blank><font color='#000000'>版权声明</font></a> | <a href='javascript:window.location.href='https://web.archive.org/web/20021014232315/http://us.cctv.com';' target=_blank><font color='#000000'>北美镜像</font></a> | <a href='/contact/index.html' target=_blank><font color='#000000'>联系我们</font></a> </td>");
+document.write("  </tr>");
+document.write("  <tr> ");
+document.write("    <td colspan=3 height=4></td>");
+document.write("  </tr>");
+document.write("  <tr> ");
+document.write("    <td colspan=3 align=center><table border=0 cellpadding=0 cellspacing=0 width=520 height=1><tr><td background='https://web.archive.org/web/20021014232315/http://www.cctv.com/prime/images/dot_line.gif'></td></tr></table></td>");
+document.write("  </tr>");
+document.write("  <tr> ");
+document.write("    <td colspan=3 height=12></td>");
+document.write("  </tr>");
+document.write("  <tr> ");
+document.write("    <td height=28 width=180>&nbsp;</td>");
+document.write("    <td align='center' ");
+document.write("      height=28><font color='#000000'>中国中央电视台版权所有<br>");
+document.write("      建议使用：800*600分辨率，16Bit颜色、<br>");
+document.write("      Netscape6.0、IE4.0以上版本浏览器和中文大字符集<br>");
+document.write("      系统集成：长天集团施贝尔公司<br>网页设计：</font><a href='https://web.archive.org/web/20021014232315/http://www.rivermap.net' target=_blank><font color='#000000'>东方河图</font></a><br>");
+document.write("    </td>");
+document.write("    <td width=240><a href='https://web.archive.org/web/20021014232315/http://www.hd315.gov.cn/beian/view.asp?bianhao=010202001032100113' target=_blank>");
+document.write("    <img border=0 height=45 src='https://web.archive.org/web/20021014232315/http://www.cctv.com/images/gongshang.gif' width=36></a></td>");
+document.write("  </tr>");
+document.write("  <tr> ");
+document.write("    <td height=28 colspan='3'>&nbsp;</td>");
+document.write("  </tr>");
+document.write("  </tbody>");
+document.write("</table>");
+
+}
+/*
+     FILE ARCHIVED ON 23:23:15 Oct 14, 2002 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 04:10:41 Nov 09, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 601.091
+  exclusion.robots: 0.069
+  exclusion.robots.policy: 0.059
+  cdx.remote: 0.055
+  esindex: 0.009
+  LoadShardBlock: 577.435 (3)
+  PetaboxLoader3.datanode: 155.99 (4)
+  PetaboxLoader3.resolve: 229.869 (2)
+  load_resource: 129.616
+*/
