@@ -1,0 +1,28 @@
+td {  font-size: 12px; line-height: 120%}
+a {  color: #000000}
+
+a.white:hover { color: #FF0000; text-decoration: underline}
+a.white:link { color: #ffffff}
+a.white:visited { color: #ffffff}
+.p14 {  font-size: 14px; line-height: 150%}
+
+
+.p6 { font-size: 6px}
+.p3 { font-size: 3px}
+a:hover { color: #FF0000; text-decoration: underline}
+a:link { color: #000000}
+a:visited { color: #000000}
+.p12 { font-size: 12px; line-height: 120%}
+.bk { border: #000000; border-style: outset; 
+border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 
+1px}
+.p14 { font-size: 14px; line-height: 150%}
+h2 {  line-height: 120%; font-size: 18px; font-weight: bolder}
+.pp {  font-size: small; line-height: 120%}
+td {  }
+td {  }
+h1 { font-size: 24px; line-height: 150%; font-weight: bolder}
+.p14new { font-size: 14px; line-height: 110%}
+.p14new2 { font-size: 14px; line-height: 120%}
+.p14red { font-size: 14px; line-height: 120%; color: #FF0000}
+.p14green { font-size: 14px; line-height: 120%; color: #219b00}

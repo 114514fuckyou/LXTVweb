@@ -1,0 +1,79 @@
+td {
+	font-size: 12px;
+	line-height: 20px;
+}
+.tmenu {
+	font-weight: bold;
+	color: #cccccc;
+	filter: Glow(Color=#999999, Strength=1);
+	width: 100px;
+}
+.tmenu1 {
+	font-weight: bold;
+	color: #FFFFFF;
+	filter: Glow(Color=#999999, Strength=1);
+	width: 100px;
+	cursor: hand;
+	font-size: 14px;
+}
+.PT1 {
+
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+	filter: DropShadow(Color=#bbbbbb, OffX=1, OffY=1, Positive=1);
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #27365C;
+}
+li {
+	text-indent: -15px;
+	list-style-type: disc;
+}
+.tmenu2 {
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;
+	filter: Glow(Color=#000000, Strength=1);
+}
+.PT2 {
+
+
+	font-size: 18px;
+	font-weight: bold;
+	color: #333333;
+	filter: DropShadow(Color=#999999, OffX=1, OffY=1, Positive=1);
+}
+.PT3 {
+
+
+
+	font-size: 14px;
+	font-weight: normal;
+	color: #333333;
+	filter: DropShadow(Color=#bbbbbb, OffX=1, OffY=1, Positive=1);
+}
+
+/*
+     FILE ARCHIVED ON 21:12:38 Oct 19, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 07:34:47 Oct 03, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 123.54
+  exclusion.robots: 0.063
+  exclusion.robots.policy: 0.054
+  cdx.remote: 0.051
+  esindex: 0.01
+  LoadShardBlock: 100.584 (3)
+  PetaboxLoader3.datanode: 69.051 (4)
+  load_resource: 52.28
+  PetaboxLoader3.resolve: 30.239
+*/

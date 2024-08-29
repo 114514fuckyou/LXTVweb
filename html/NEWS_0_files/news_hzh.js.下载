@@ -1,0 +1,6 @@
+document.writeln("<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0' width='350' height='300'>");
+document.writeln("  <param name='movie' value='http://swf.enorth.com.cn/0/03/69/42/3694208_974540.swf'>");
+document.writeln("  <param name='quality' value='high'>");
+document.writeln("  <param name='url' value='http://eap.teamwork.enorth.com.cn/eap/display.do?operation=add&channel_id=17000000&adpos_ename=news_hzh&ad_id=112&customer_id=2&url='>");
+document.writeln("  <embed src='http://swf.enorth.com.cn/0/03/69/42/3694208_974540.swf' quality='high' pluginspage='http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash' type='application/x-shockwave-flash' width='350' height='300'></embed>");
+document.writeln("</object>");

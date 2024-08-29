@@ -1,0 +1,12 @@
+document.write("<span name=\'moodcounter\' pid=\'9\' key=\'"+_vkey+"\' newsid=\'"+_vnewsid+"\' url=\'"+_vurl+"\' expara=\'\'" + " channelid=\'"+_vchannelid+"\' pubdate=\'"+_vpubdate+"\' style=\'display:none\'></span>");
+document.write("<script id=\'MOODCOUNTER_FORIE\' type=\'text/javascript\'></script>");
+document.write("<script type=\'text/javascript\' src=\'http://www.enorth.com.cn/sys/mood/default/socialMoodTemplate.js\'></script>");
+document.write("<script type=\'text/javascript\' src=\'http://www.enorth.com.cn/sys/mood/default/moodcounter.js\'></script>");
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,154 @@
+UNKNOWN
+{
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_011.gif) #d3dce8 repeat-x;
+    OVERFLOW: hidden;
+    HEIGHT: 21px;
+    TEXT-ALIGN: left
+}
+.PostXq
+{
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_011.gif) #d3dce8 repeat-x;
+    OVERFLOW: hidden;
+    HEIGHT: 21px;
+    TEXT-ALIGN: left
+}
+.PostXq-Btn-Blk
+{
+    BORDER-RIGHT: #aeb7c3 1px solid;
+    BORDER-TOP: #aeb7c3 1px solid;
+    BACKGROUND: #f3f9fe;
+    BORDER-LEFT: #aeb7c3 1px solid;
+    BORDER-BOTTOM: #aeb7c3 1px solid
+}
+.PostXq-Btn
+{
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_014.gif) repeat-x;
+    OVERFLOW: hidden;
+    WIDTH: 54px;
+    HEIGHT: 40px
+}
+.PostXq-Btn-Ln
+{
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_013.gif) #fff repeat-y;
+    WIDTH: 2px
+}
+.PostXq-Btn A
+{
+    DISPLAY: block;
+    OVERFLOW: hidden;
+    WIDTH: 54px;
+    COLOR: #009;
+    HEIGHT: 40px;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+.PostXq-Btn A:hover
+{
+    COLOR: #009;
+    TEXT-DECORATION: underline
+}
+.PostXq-Btn A IMG
+{
+    MARGIN: 2px 0px 0px
+}
+.PostXq-Btn A SPAN
+{
+    PADDING-RIGHT: 0px;
+    DISPLAY: block;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: center
+}
+A.PostXq-Btn-Jm1
+{
+    DISPLAY: block;
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_015.gif) #b8d0e9 no-repeat;
+    OVERFLOW: hidden;
+    WIDTH: 111px;
+    COLOR: #000;
+    LINE-HEIGHT: 26px;
+    HEIGHT: 25px;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+A.PostXq-Btn-Jm1:hover
+{
+    COLOR: #c00
+}
+.XqJg-Blk
+{
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_029.gif) #d9e6f4 no-repeat;
+    OVERFLOW: hidden;
+    WIDTH: 559px;
+    HEIGHT: 178px
+}
+.XqJg-Blk H2
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 13px;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    PADDING-BOTTOM: 0px;
+    OVERFLOW: hidden;
+    COLOR: #000;
+    LINE-HEIGHT: 28px;
+    PADDING-TOP: 0px;
+    HEIGHT: 26px;
+    TEXT-ALIGN: left
+}
+.XqJg-Blk-V
+{
+    WIDTH: 559px
+}
+.XqJg-Blk-V TD
+{
+    WIDTH: 50px
+}
+.XqJg-Blk-V-t
+{
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_017.gif) no-repeat;
+    VERTICAL-ALIGN: bottom;
+    WIDTH: 22px;
+    HEIGHT: 79px
+}
+.XqJg-Blk-V-t-r
+{
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_019.gif) repeat-y 16px 0px
+}
+.XqJg-Blk-V-b
+{
+    OVERFLOW: hidden;
+    HEIGHT: 53px;
+    TEXT-ALIGN: center
+}
+.XqJg-Blk-V-b SPAN
+{
+    PADDING-RIGHT: 0px;
+    DISPLAY: block;
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 14px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 5px
+}
+.XqJg-Blk-V-b IMG
+{
+    MARGIN: 5px 0px 0px
+}
+A.PostXq-Btn-Jm
+{
+    DISPLAY: block;
+    BACKGROUND: url(http://www.enorth.com.cn/sys/mood/default/images/news_xq_ws_015.gif) #b8d0e9 no-repeat;
+    MARGIN: 0px;
+    OVERFLOW: hidden;
+    WIDTH: 111px;
+    COLOR: #000;
+    LINE-HEIGHT: 26px;
+    HEIGHT: 25px;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+A.PostXq-Btn-Jm:hover
+{
+    COLOR: #c00
+}

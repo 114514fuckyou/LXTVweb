@@ -1,0 +1,43 @@
+var root = "http://www.enorth.com.cn/sys/mood/default/";
+var imgRoot = root + "images/";
+var resBase = root + "images/enorth/";
+var progBase = "http://jsp5.enorth.com.cn:7001/mood/";
+var cookieDomain = "enorth.com.cn";
+var redPicUrl = imgRoot + "news_xq_ws_019.gif";
+var greenPicUrl = imgRoot + "news_xq_ws_018.gif";
+var cssUrl = root + "css/socialMoodTemplate.css";
+var maxColumnHeight = 79;
+var imgWidth = 24;
+var imgHeight = 24;
+var tableWidth = 560;
+var caption = "请选择您看到这篇新闻时的心情";
+var tdStyle = " style=\"font-size:14px;\"";
+var itemArray = new Array(
+new Array("感动","news_xq_ws_001.gif"),
+new Array("同情","news_xq_ws_002.gif"),
+new Array("无聊","news_xq_ws_003.gif"),
+new Array("愤怒","news_xq_ws_004.gif"),
+new Array("搞笑","news_xq_ws_005.gif"),
+new Array("难过","news_xq_ws_006.gif"),
+new Array("新奇","news_xq_ws_007.gif"),
+new Array("温馨","news_xq_ws_008.gif"),
+new Array("高兴","news_xq_ws_009.gif")
+);
+var itemCount = itemArray.length;
+var first = 0; // 开始 >= first
+var last = first + itemArray.length; // 结束 < last
+var counterPage = "<form name=\"myform\"><div align=\"center\"><table width=\""+tableWidth+"\" cellspacing=\"0\"><tr><td><img src=\""+resBase+"news_xq_ws_030.gif\" width=\""+tableWidth+"\" height=\"5\" alt=\"\"/></td></tr></table><table width=\""+tableWidth+"\" cellspacing=\"0\" style=\"background:#d9e6f4;\"><tr align=\"left\"><td style=\"line-height:42px; color:#000; font-size:14px; padding-left:25px;\">"+caption+"</td></tr></table><table width=\""+tableWidth+"\" cellspacing=\"0\" style=\"background:#d9e6f4;\"><tr valign=\"top\"><td width=\""+tableWidth+"\" align=\"center\"><table width=\"520\" cellspacing=\"0\" style=\"line-height:23px;\"><tr valign=\"top\" align=\"center\">";
+for (var i = 0, len = itemArray.length; i < len; i++) {
+    counterPage += "<td"+tdStyle+"><img src=\""+resBase+itemArray[i][1]+"\" width=\""+imgWidth+"\" height=\""+imgHeight+"\" alt=\"\"/><br/>"+itemArray[i][0]+"<br/><input type=\"radio\"/ name=\"moodradio\" value=\""+(first + i)+"\" onclick=\"javascript:moodClick(document.getElementsByName('moodradio'));return false;\"></td>";
+}
+counterPage+="</tr></table></td><!--<td width=\"93\" style=\"padding:17px 0 27px 0;\" align=\"left\"><input type=\"image\" src=\""+resBase+"news_xq_ws_032.gif\" width=\"75\" height=\"36\" alt=\"送出\" onclick=\"javascript:moodClick(document.getElementsByName('moodradio'));return false;\" /></td>--></tr></table><!--<table width=\""+tableWidth+"\" cellspacing=\"0\"><tr><td><img src=\""+resBase+"news_xq_ws_032.gif\" width=\""+tableWidth+"\" height=\"5\" alt=\"\"/></td></tr></table>--></div></form>";
+var resultPage="<div align=\"center\"><div class=\"XqJg-Blk\"><h2>共有_MOODTOTAL_人表态</h2><table cellspacing=\"0\" class=\"XqJg-Blk-V\"><tr align=\"center\" valign=\"bottom\">";
+for (var i = 0, len = itemArray.length; i < len; i++) {
+    resultPage += "<td><table cellspacing=\"0\" class=\"XqJg-Blk-V-t\"><tr valign=\"bottom\"><td><img src=\"_MOOD"+(first + i)+"PIC_\" width=\"22\" height=\"_MOOD"+(first + i)+"_\" alt=\"_MOOD"+(first + i)+"RATE_人\" title=\"_MOOD"+(first + i)+"RATE_人\"/></td></tr></table><div class=\"XqJg-Blk-V-b\"><img src=\""+resBase+itemArray[i][1]+"\" width=\""+imgWidth+"\" height=\""+imgHeight+"\" alt=\"\"/><span>"+itemArray[i][0]+"</span></div></td>";
+}
+resultPage+="<td align=\"left\" valign=\"bottom\" height=\"122\" style=\"background:none;\"><!--<a href=\"\" class=\"PostXq-Btn-Jm\" target=\"_self\" title=\"新闻心情排行\">新闻心情排行 &gt;&gt;</a>--></td></tr></table></div></div>";
+var __obj__ = document.getElementById("__$aaa$__");if (__obj__ != null) {__obj__.value=counterPage + "\r\n\r\n\r\n"+resultPage;}
+
+ 
+ 
+ 
