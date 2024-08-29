@@ -1,0 +1,21 @@
+BODY {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+A {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #cc3300; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+A.level {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+A.level:hover {
+	FONT-SIZE: 12px; COLOR: #cc3300; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.generalstyle {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.news-contents {
+	FONT-SIZE: 14px; COLOR: #666666; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
