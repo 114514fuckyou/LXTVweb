@@ -1,0 +1,473 @@
+<!-- saved from url=(0089)http://web.archive.org/web/20021015012904if_/http://www.cctv.com/tvonline/main_media.html -->
+<html version="4"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><script type="text/javascript" src="./bundle-playback.js.����" charset="utf-8"></script>
+<script type="text/javascript" src="./wombat.js.����" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="./ruffle.js.����"></script>
+<script type="text/javascript">
+  __wm.init("http://web.archive.org/web");
+  __wm.wombat("http://www.cctv.com:80/tvonline/main_media.html","20021015012904","http://web.archive.org/","web","//web-static.archive.org/_static/",
+	      "1034645344");
+</script>
+<link rel="stylesheet" type="text/css" href="./banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+<title>MEDIA</title>
+
+<style type="text/css">
+<!--
+td {  font-size: 12px; color: #FFFFFF}
+a {  color: #CCCCCC; text-decoration: none}
+-->
+</style>
+<script language="JavaScript">
+<!-- Hide
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+//�ݴ�
+// -->
+</script>
+<script language="JavaScript">
+<!--
+var srcc = window.location;
+srcc = srcc.toString()
+start = srcc.indexOf("?");
+end = srcc.length;
+if (start==-1){
+srcc = "../../video/wmv/flower/50.wmv"
+}
+
+if (start!=-1){
+srcc = srcc.substring(start+1,end);
+}
+
+//alert(srcc)
+
+
+
+ day=17;
+ month=5;
+ year=2002;
+ hour=18;
+    if ( navigator.appName == "Netscape" )
+    {
+        navigator.plugins.refresh();
+        document.write("\x3C" + "applet MAYSCRIPT Code=NPDS.npDSEvtObsProxy.class")
+        document.writeln(" width=352 height=288 name=appObs\x3E \x3C/applet\x3E")
+    }
+var Player;
+var isplaying;
+var movelen;
+var history;
+var ispause;
+var isstop;
+history=false;
+movelen=0;
+isstop=false;
+isplaying=false;
+ispause=false;
+mute=false;
+Player="document.NSPlay";
+var playfile='';
+function preload(imgname,imgsrc)
+{
+	eval(imgname+'=new Image()')
+	eval(imgname+'.src="images\/'+imgsrc+'"')
+}
+preload("play1","play.gif")
+preload("play2","play_b.gif")
+preload("stop1","stop.gif");
+preload("stop2","stop_b.gif");
+preload("sound1","sound.gif");
+preload("sound2","sound_b.gif");
+preload("volume","volume.gif");
+preload("pause1","pause.gif");
+preload("pause2","pause_b.gif");
+preload("full1","full.gif");
+preload("full2","full_b.gif");
+
+function playy(src){
+var abc
+abc = src + ""
+playhistory(abc)
+}
+function doPlay(){
+
+  if(!isplaying){
+    if (eval(Player).FileName=='') return;
+	eval(Player).Play();
+	if (eval(Player).FileName!=filename)
+if(!ispause){	  
+movelen=0;
+}
+    document.play.src=play2.src;
+    document.stop.src=stop1.src;
+    document.pause.src=pause1.src;
+    isplaying=true;  
+    ispause = false;
+    isstop=false;
+  }
+}    
+
+
+function DoStop()
+{
+  if(isplaying){
+	eval(Player).CurrentPosition=0;
+	eval(Player).Stop();
+	document.play.src=play1.src;
+    document.stop.src=stop2.src;
+    document.pause.src=pause1.src;
+    if (document.seek.style.visibility=="visible")
+      document.seek.style.left=136;
+    isstop=true;
+    isplaying=false;
+    ispause=false;
+   } 
+}
+
+
+function DoPause()
+{
+if(isplaying){
+   eval(Player).Pause();
+   isplaying = false
+   ispause = true
+   isstop=false;
+	document.play.src=play1.src;
+    document.pause.src=pause2.src;
+    document.stop.src=stop1.src;
+}
+}
+
+
+function SetPosition(Pos)
+{
+	if (!isplaying) return;
+	eval(Player).CurrentPosition=+Pos;
+}
+
+function SetVolume(Pos)
+{
+eval(Player).volume=Pos;
+}
+
+function SetMute()
+{
+	if (!isplaying) return
+	
+	if (mute){
+		eval(Player).Mute=false
+	    document.sound.src=sound1.src;	    
+	    document.vol.style.visibility="visible";
+	    mute=false	
+	}	
+	else{
+	  eval(Player).Mute=true;
+	  document.sound.src=sound2.src;
+	  document.vol.style.visibility="hidden";
+	  mute=true
+	}  
+}
+function GetLength()
+{
+	return eval(Player).Duration;
+}
+function GetPosition()
+{
+	tt=eval(Player).CurrentPosition
+	return tt;
+}
+function SetSource(srcname)
+{
+	if (srcname==filename){
+	  history=false;
+	  //eval(Player).AutoRewind=true;
+	  document.seek.style.visibility="hidden";
+	 } 
+	 else{
+	  document.seek.style.visibility="visible"; 
+	  //eval(Player).AutoRewind=false;
+	  history=true
+	 } 
+	eval(Player).FileName=srcname;
+	document.play.src=play2.src;
+    document.stop.src=stop1.src;
+    isplaying=true;
+}
+function SetWH(widthpx,heightpx)
+{
+	eval(Player).width=widthpx
+	eval(Player).height=heightpx
+}
+function SetDisplaySize(setting)
+{
+	if (isplaying)
+  	  eval(Player).DisplaySize=setting
+	//ȫ�� setting=3
+	//100% setting=0
+	// 50% setting=1
+	//200% setting=2 
+}
+            
+
+
+var x,theImg;
+
+var Maxvol, Minvol
+
+
+Maxvol=300;
+Minvol=250;
+cur=280;
+function move(){
+  if (event.button==1&&isplaying){
+    left=temp1+event.clientX-x
+      
+    if ((left<=Maxvol)&&(left>=Minvol))
+      theImg.style.pixelLeft=left
+     else 
+       if(left>Maxvol) 
+         theImg.style.pixelLeft=Maxvol
+         else
+           theImg.style.pixelLeft=Minvol 
+   // document.form1.pos.value=theImg.style.pixelLeft
+  return false
+  }
+}
+function enddrag(){
+  
+ //������������
+ if (isplaying){
+   cur=theImg.style.pixelLeft;
+   cur=Math.floor((Maxvol-cur)/(Maxvol-Minvol)*(-2000)); 
+   SetVolume(cur);
+   document.onmousemove=null;
+  } 
+
+}
+
+
+function begindrag(Elm){
+  if (!document.all)
+    return
+  if (!isplaying)
+    return   
+  temp1=Elm.style.pixelLeft   
+  theImg=Elm
+  x=event.clientX;
+  document.onmousemove=move     
+}
+
+
+
+
+var Start, End;
+var seeking;
+seeking=false
+
+Start=136;
+End=214;
+
+
+function beginseek(Elm){
+  if (!document.all)
+    return
+  if (!isplaying)
+    return   
+  temp1=Elm.style.pixelLeft   
+  theImg=Elm
+  x=event.clientX;
+  seeking=true
+  document.onmousemove=moveseek     
+}
+
+function moveseek(){
+  if (event.button==1&&isplaying){
+    left=temp1+event.clientX-x
+      
+    if ((left<=End)&&(left>=Start))
+      theImg.style.pixelLeft=left
+     else 
+       if(left>End) 
+         theImg.style.pixelLeft=End
+         else
+           theImg.style.pixelLeft=Start 
+   // document.form1.pos.value=theImg.style.pixelLeft
+  return false
+  }
+}
+
+function enddragseek(){
+  
+ //��������ʱ������
+ if (isplaying){
+   movelen=GetLength()
+   cur=theImg.style.pixelLeft;
+   if (cur==End)
+     DoStop();
+   else{  
+     cur=Math.floor((cur-Start)*movelen/(End-Start)); 
+     SetPosition(cur);
+     seeking=false;
+     document.onmousemove=null;
+    } 
+  } 
+
+}
+
+function changeseek(){
+  if (eval(Player).PlayState!=2) return;
+  if (!history) return;
+  if (!seeking){
+    if (movelen==0)
+      movelen=GetLength();  
+    cur=GetPosition();
+    cur=Math.floor((End-Start)*cur/movelen);
+    document.seek.style.pixelLeft=Start+cur;
+  }  
+  //alert(isplaying+''+history);
+  setTimeout("changeseek()",1000);
+    
+   //} 
+  
+  
+}
+
+function playhistory(src){
+  SetSource(src);  
+}
+function showchoose() 
+{ 
+ if (document.all.menu1.style.display=="none") 
+  document.all.menu1.style.display="block"; 
+  else 
+  {
+  playhistory(document.formdisco.getyy.value+document.formdisco.getmm.value+document.formdisco.getdd.value+".wmv")
+  document.all.menu1.style.display="none"; 
+  }
+} 
+
+//-->
+</script></head><body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" onLoad="playhistory(srcc)" inject_video_svd="true">
+<script event="PlayStateChange(lOldState, lNewState)" for="NSPlay" language="JScript">
+    if (lNewState==2){
+      movelen=GetLength();      
+      changeseek();
+    }      
+
+</script>
+
+<script event="EndOfStream(lResult)" for="NSPlay" language="JScript">
+    DoStop()    
+</script>
+
+
+
+
+<img alt="��������(volume)" height="11" id="vol" name="vol" onMouseDown="begindrag(document.vol)" onMouseUp="enddrag()" src="./sound_button.gif" style="CURSOR: hand; LEFT: 280px; POSITION: absolute; TOP: 263px; visibility: visible" width="8"> 
+<img alt="ʱ�����?Time)" height="11" id="seek" name="seek" onMouseDown="beginseek(document.seek)" onMouseUp="enddragseek()" src="./course_button.gif" style="CURSOR: hand; LEFT: 140px; POSITION: absolute; TOP: 264px; VISIBILITY: visible" width="15"> 
+<table width="335" border="0" height="255" cellpadding="0" cellspacing="0" bgcolor="4E565C">
+  <tbody><tr>
+    <td align="center"> <object classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701" height="240" id="NSPlay" type="application/x-oleobject" width="320" viewastext="" standby="���� Microsoft Windows Media Player ���?..">
+        <param name="FileName" value="">
+        <param name="AutoStart" value="true">
+        <param name="AutoRewind" value="-1">
+        <param name="AnimationAtStart" value="false">
+        <param name="ShowControls" value="false">
+        <param name="ClickToPlay" value="false">
+        <param name="EnableContextMenu" value="true">
+        <param name="EnablePositionControls" value="false">
+        <param name="Balance" value="0">
+        <param name="ShowStatusBar" value="false">
+        <param name="AutoSize" value="0">
+        <embed type="application/x-mplayer2" pluginspage="http://www.microsoft.com/Windows/Downloads/Contents/Products/MediaPlayer/" filename="" src="" autostart="false" enablecontextmenu="false" clicktoplay="false" enablepositioncontrols="false" showcontrols="0" showstatusbar="1" showdisplay="0" width="320" height="240">
+         
+      </object></td>
+  </tr>
+</tbody></table>
+<table width="335" border="0" cellpadding="0" cellspacing="0" height="1" bgcolor="142E44">
+  <tbody><tr>
+    <td></td>
+  </tr>
+</tbody></table>
+<table width="335" border="0" height="27" cellpadding="0" cellspacing="0" bgcolor="3A3A3A">
+  <tbody><tr> 
+    <td>
+      <table width="335" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td width="7"> </td>
+          <td width="37"><a href="main_media.html#" onClick="Javascript:doPlay()"><img alt="��ʼ����(Play)" border="0" height="11" name="play" src="./play.gif" width="37"></a></td>
+          <td width="6"> </td>
+          <td width="37"><a href="main_media.html#" onClick="Javascript:DoStop()"><img alt="ֹͣ����(Stop)" border="0" height="11" name="stop" src="./stop_b.gif" width="37"></a></td>
+          <td width="6"> </td>
+          <td width="37"><a href="main_media.html#" onClick="DoPause()"><img src="./pause.gif" width="37" height="11" border="0" name="pause"></a></td>
+          <td width="6"> </td>
+          <td width="93"><img src="./course.gif" width="93" height="11"></td>
+          <td width="6"> </td>
+          <td width="11"><a href="main_media.html#" onClick="SetMute()"><img src="./sound.gif" width="11" height="11" border="0" name="sound"></a></td>
+          <td width="6"> </td>
+          <td> <img name="volume" src="./volume.gif" width="52" height="11"></td>
+          <td width="6"> </td>
+          <td><a onClick="SetDisplaySize(3)"><img src="./full.gif" width="11" height="11" border="0" style="cursor:hand" name="full"> 
+            </a></td>
+          <td width="7"> </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<table width="335" border="0" cellpadding="0" cellspacing="0" height="1" bgcolor="#666666">
+  <tbody><tr> 
+    <td></td>
+  </tr>
+</tbody></table>
+<table width="335" border="0" height="48" cellpadding="0" cellspacing="0" bgcolor="3A3A3A">
+  <tbody><tr> 
+    <td>
+      <table width="335" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td width="7"> </td>
+          <td width="75"> 
+            <table width="75" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr> 
+                <td><a href="main_real_50.html"><img src="realplayer_b.gif" width="73" height="18" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td height="2"></td>
+              </tr>
+              <tr> 
+                <td bgcolor="5E686F"><img src="mediaplayer.gif" width="73" height="18"></td>
+              </tr>
+            </tbody></table>
+          </td>
+          <td bgcolor="5E686F">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr> 
+                <td width="50" align="center"><img src="../../image/wmvlogo.gif" width="30" height="30" alt="wmv"></td>
+                <td><a href="http://www.microsoft.com/windows/windowsmedia/cn/download/default.asp" target="_blank"> 
+                  media player  插件下载 </a></td>
+              </tr>
+            </tbody></table>
+          </td>
+          <td width="7"> </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<script language="JavaScript">
+cur=Math.floor((Maxvol-cur)/(Maxvol-Minvol)*(-2000));  
+SetVolume(cur); 
+playfile=''; 
+var filename='live.wmv '
+if (playfile!=''){ 
+  SetSource(filename);  
+} 
+</script>
+
+
+
+<div id="videoPopupMenu"></div></body></html>
