@@ -22,7 +22,6 @@ body {
 </head>
 <body>
   <h1><img src="evs_lxtv_new.png" width="800" height="161" alt=""/></h1>
-  <h1><img src="../image/qvnidayede.gif" width="320" height="240" alt=""/></h1>
     </blockquote>
   </blockquote>
 </body>
@@ -87,6 +86,33 @@ body {
         console.log(x, y);
     }, 10)
 </script>
+<style>
+        #layer a img{
+            width: 150px;
+            height: 150px;
+        }
+        div#layer{
+            position: absolute;
+            left: 15px;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="layer">
+        <a href="../../"><img src="../image/qvnidayede.gif" /></a>
+    </div>
+
+    <script>
+        window.οnlοad=move;
+        function move(){
+            document.getElementById("layer").style.left=Math.random()*50+"px";
+            document.getElementById("layer").style.top=Math.random()*60+"px";
+            setInterval("move()",1000);
+        }
+        
+    </script>
+
 
 </body>
 </html>
