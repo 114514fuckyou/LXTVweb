@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网站建设中</title>
+</head>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+</style>
+</head>
+<body>
+  <h1><img src="../image/qvnidayede.gif" width="320" height="240" alt=""/></h1>
+    </blockquote>
+  </blockquote>
+</body>
+</html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>图片随机浮动</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            position: relative;
+            width: 100vh;
+            height: 100vh;
+        }
+
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    let img = document.querySelector('img')
+    let x = 0, y = 0                                    // 元素离页面水平、垂直方向距离 
+    let xflag = true, yflag = true                      // 设置水平、垂直标志位
+    setInterval(() => {
+        // 获取页面宽高
+        let w = document.body.offsetWidth
+        let h = document.body.offsetHeight
+
+        // 判断图片碰壁的四种情况
+        if (x == 0) xflag = true                        // 碰到左边
+        if (y == 0) yflag = true                        // 碰到上边
+        if (x == w - img.offsetWidth) xflag = false     // 碰到右边
+        if (y == h - img.offsetHeight) yflag = false    // 碰到下边
+
+        // 根据碰壁情况进行改变x和y的值
+        // 方法一
+        // if (xflag && yflag) x++, y++                    // 浮动方向：右下
+        // if (xflag && !yflag) x++, y--                   // 浮动方向：右上
+        // if (!xflag && yflag) x--, y++                   // 浮动方向：左下
+        // if (!xflag && !yflag) x--, y--                  // 浮动方向：左上
+        
+		// 方法二
+        xflag ? x++ : x--
+        yflag ? y++ : y--
+
+        // 设置图片的位置
+        img.style.left = x + 'px'
+        img.style.top = y + 'px'
+        console.log(x, y);
+    }, 10)
+</script>
+<style>
+        #layer a img{
+            width: 150px;
+            height: 150px;
+        }
+        div#layer{
+            position: absolute;
+            left: 15px;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+</script>
+<audio controls="" src="../../audio/IMA.m4a"></audio>
+
+</body>
+</html>
